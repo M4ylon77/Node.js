@@ -10,7 +10,6 @@
     <h1>Lista de Clientes:</h1>
   <table style="border: 2px solid ;">
     <tr >
-      <th style="border: 2px solid ;">id</th>
       <th style="border: 2px solid ;">Nome</th>
       <th style="border: 2px solid ;">cpf</th>
       <th style="border: 2px solid ;">email</th>
@@ -20,7 +19,6 @@
      <tr>
     <% for(let i = 0; i < listacliente.length; i++) { %>
     <tr>
-      <td style="border: 2px solid ; padding: 3px;"> <%= listacliente[i].id %></td>
       <td style="border: 2px solid ; padding: 3px;"><%= listacliente[i].nome %> </td>
       <td style="border: 2px solid ; padding: 3px;"><%= listacliente[i].cpf %></td>
       <td style="border: 2px solid ; padding: 3px;" > <%= listacliente[i].email %></td>
