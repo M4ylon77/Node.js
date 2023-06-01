@@ -6,11 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fazer node.js</title>
 </head>
+<style>
+div{
+display:flex;
+
+width: max-content;
+
+}
+
+</style>
 <body>
-    <fieldset>
+    <strong><h1>Cadastrar cliente</h1></strong>
+   <div class="fieldset">
+    <fieldset >
 
         <form action="/add" method="post">
-        <p>Nome: </p>
+            <p>Id</p>
+            <input type="text" name="id"><br>
+                    <p>Nome: </p>
         <input type="text" name="nome"><br>
         <p>CPF: </p>
         <input type="text" name="cpf"><br>
@@ -25,5 +38,6 @@
 
 </form>
 </fieldset>
+</div>
 </body>
 </html>

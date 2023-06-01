@@ -31,4 +31,9 @@ rotas.get("/menu.html" , (req,res) =>{
   res.sendFile(filePath);
 });
 
+
+
+rotas.get("/eclusao", FormularioController.deletar);
+rotas.post("/delete", FormularioController.delete);
+
 module.exports = rotas;
