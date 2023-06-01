@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <center><h1>Lista de Itens:</h1></center>
+
+  <table style="border: 2px solid ; position: relative; bottom: 150px;">
+    <tr >
+      <th style="border: 2px solid ;">Nome</th>
+      <th style="border: 2px solid ;">Marca</th>
+      <th style="border: 2px solid ;">Valor</th>
+    </tr>
+     <tr>
+    <% for(let i = 0; i < listaDeItens.length; i++) { %>
+    <tr>
+      <td style="border: 2px solid ; padding: 3px;"><%= listaDeItens[i].nome %> </td>
+      <td style="border: 2px solid ; padding: 3px;"><%= listaDeItens[i].marca %></td>
+      <td style="border: 2px solid ; padding: 3px;" > <%= listaDeItens[i].valor %></td><br>
+    </tr>
+    <% } %>
+  </tr>  
+</table>
+</body>
+</html>
