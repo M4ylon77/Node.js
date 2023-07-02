@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+            font-size: xx-small;
+            color: blue;
+            transition: 0.6s ease-out;
+        }
+        table{
+            transition: 0.6s ease-in-out;
+
+        }
+        table:hover{
+            font-size: large;
+            color: green;
+            text-align: center;
+
+        }
+        form:hover{
+            text-align: center;
+            font-size: large;
+
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Atualização de Cliente</h1>
+
+  
+        <% listaUpcliente.forEach(cliente => { %>  
+    <%= cliente.nome%>          
+<table style="border: 2px solid; ">
+    <tr>
+        <th style="border: 2px solid;">Nome</th>
+        <th style="border: 2px solid;">Cpf</th>
+        <th style="border: 2px solid ;">email</th>
+        <th style="border: 2px solid ;">telefone</th>
+        <th style="border: 2px solid ;">fidelidade</th>
+    </tr>
+
+            <tr>
+     <td style="border: 2px solid;"><%= cliente.nome %></td> 
+    <td style="border: 2px solid;"><%=cliente.cpf %></td>
+    <td style="border: 2px solid ; padding: 3px;" > <%= cliente.email %></td>
+      <td style="border: 2px solid ; padding: 3px;" > <%= cliente.telefone %></td>
+      <td style="border: 2px solid ; padding: 3px;" > <%= cliente.fidelidade %></td>
+    
+      </tr>
+      <tr>
+       <form action="/listaUp/<%= cliente.id%>" method="post" class="arqui">
+       <td>
+        <input type="text" name="nome" placeholder="Atualizar Nome"></td>
+        <td> 
+        <input type="text" name="cpf" placeholder="Atualizar Cpf" ></td>
+        <td>
+        <input type="text" name="email" placeholder="Atualizar e-mail"></td>
+        <td>
+        <input type="text" name="telefone" placeholder="Atualizar Telefone "></td>
+        <td> 
+        <input type="text" name="fidelidade" placeholder="Atualizar Fidelidade"></td>
+        <td><button type="submit">update</button></td>
+    </form></td>
+         <td><form action="/deletar/<%= cliente._id %>" method="post">
+            <input type="submit" value="Deletar">
+         </form></td>   
+    
+    </tr>
+</table><br>
+
+<% }) %>
+<button onclick="history.back()" >Voltar</button>
+
+
+</body>
+
+</html>
